@@ -33,8 +33,8 @@ namespace WindowsFormsApp2 {
             a = a / 2;
             b = b / 2;
             c = (b*b*3.14) / (a*a*3.14);
-            
-            textBox3.Text = ($"{c:0.##}");
+            c = Math.Round(c, 2, MidpointRounding.AwayFromZero);
+            textBox3.Text = (c.ToString());
             textBox4_TextChanged(sender,e);
         }
 
