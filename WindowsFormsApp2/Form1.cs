@@ -43,17 +43,12 @@ namespace WindowsFormsApp2 {
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e) {
-            char number = e.KeyChar;
-            if (!Char.IsDigit(number)) 
-                
-            
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
                 e.Handled = true;
-
         }
 
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e) {
-            char number = e.KeyChar;
-            if (!Char.IsDigit(number))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
                 e.Handled = true;
         }
 
@@ -70,9 +65,9 @@ namespace WindowsFormsApp2 {
         }
 
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e) {
-            char number = e.KeyChar;
-            if (!Char.IsDigit(number))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) 
                 e.Handled = true;
+            
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e) {
