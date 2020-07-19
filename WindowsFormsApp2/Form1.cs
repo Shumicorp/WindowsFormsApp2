@@ -70,9 +70,9 @@ namespace WindowsFormsApp2 {
         }
 
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e) {
-            //char number = e.KeyChar;
-            //if (!Char.IsDigit(number))
-            //    e.Handled = true;
+            char number = e.KeyChar;
+            if (!Char.IsDigit(number))
+                e.Handled = true;
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e) {
